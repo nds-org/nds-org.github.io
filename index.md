@@ -1,4 +1,21 @@
-## National Data Service Labs
+---
+layout: default
+title: National Data Service Labs
+---
 
 Content related to the NDS Labs initiative.
+
+{% for post in site.posts %}
+
+<article class='post'>
+  <h1 class='post-title'>
+    <a href="{{ site.path }}{{ post.url }}">
+      {{ post.title }}
+    </a>
+  </h1>
+  <div class="post-date">{{ post.date | date: "%b %-d, %Y" }}</div>
+  {{ post.content }}
+</article>
+
+{% endfor %}
 
