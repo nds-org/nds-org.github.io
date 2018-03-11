@@ -3,10 +3,5 @@ layout: default
 title: National Data Service Labs
 ---
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+
+[Web-based access to X-Windows applications using Docker, Xpra and OpenBox](_posts/2018-03-11.md)
