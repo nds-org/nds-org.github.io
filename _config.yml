@@ -15,6 +15,16 @@ remote_theme: "mmistakes/minimal-mistakes"
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 
+####################################################################
+#                                                                  #
+# WARNING: jekyll-paginate-v2 is not yet supported by GitHub pages #
+# If hosting on GitHub pages, comment the below section out        #
+#                                                                  #
+# This will work locally, but GitHub pages may have issues         #
+# building or running your site.                                   #
+#                                                                  #
+####################################################################
+
 # With jekyll-paginate-v2:
 #pagination:
 #  enabled: true
