@@ -1,6 +1,7 @@
 ---
-layout: home 
+layout: home
 title: National Data Service Labs
-pagination: 
-  enabled: true
 ---
+{% for post in site.posts limit:3 %}
+  {% include archive-single.html %}
+{% endfor %}
