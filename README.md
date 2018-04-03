@@ -71,7 +71,7 @@ docker run -d --name=jekyll --label=jekyll --volume=$(pwd):/srv/jekyll  -it -p 1
 ## Rapid Testing with LiveReload
 To start up a web server that automatically rebuil;ds/refreshes your browser while editing, run the following command:
 ```bash
-docker rm -f jekyll; docker build -t ndslabs/jekyll . && docker run -d --name=jekyll --label=jekyll --volume=$(pwd):/srv/jekyll  -it -p 127.0.0.1:4000:4000 -p 127.0.0.1:35729:35729 ndslabs/jekyll serve --watch --livereload && docker logs -f jekyll
+docker run -d --name=jekyll --label=jekyll --volume=$(pwd):/srv/jekyll  -it -p 127.0.0.1:4000:4000 -p 127.0.0.1:35729:35729 ndslabs/jekyll serve --watch --livereload && docker logs -f jekyll
 ```
 
 With `--livereload` enabled, any new build will automatically trigger your browser to refresh the current page that if it is navigated to 127.0.0.1:4000. 
