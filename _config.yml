@@ -4,12 +4,13 @@ author:
 
 author_profile: true
 
-# Use 'remote_theme' when testing locally
-#theme: "mmistakes/minimal-mistakes"
-#theme: jekyll-theme-minimal
-
-# Use 'theme' when testing on GitHub
+# Use 'remote_theme' when testing locally or using a user's shared theme
+#    See https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/
 remote_theme: "mmistakes/minimal-mistakes"
+
+# Use 'theme' when using official themes 
+#    See https://pages.github.com/themes/
+#theme: "minima"
 
 # With jekyll-paginate:
 paginate: 5 # amount of posts to show
