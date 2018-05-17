@@ -72,7 +72,7 @@ spec:
       secretName: tls-secret
 ```
 
-Full Example: https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/tls-termination
+Full Example: [TLS Termination](https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/tls-termination)
 
 ## Multi-Domain / Wildcard Certificates
 There is no difference in configuring multi-domain or wildcard certificates for TLS termination using the Ingress Controller.
@@ -95,14 +95,14 @@ You can specify one of several authentication classes of authentication to secur
 
 * Basic Auth - create a username and password that the user will be prompted for when attempting to access this ingress domain/path
 * Client Certificates - create a TLS cert that can be used to automatically authenticate you into service that you have access to 
-* External Auth - set an "auth" annotation to determine whether user is authenticated, set "sign_in" annotation to determine where they should be routed in order to authenticate them
-* Basic Auth: https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/auth/basic
+* External Auth - set an "auth" annotation to determine whether user is authenticated, set "sign_in" annotation to determine where they should be routed in order to authenticate them. You can optionally use the OAuth2 proxy to authenticate via (for example) GitHub or Google credentials
 
-Client Certificate Auth: https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/auth/client-certs
+Full Examples:
+* [Basic Auth](https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/auth/basic)
+* [Client Certificates](https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/auth/client-certs)
+* [External Auth](https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/auth/external-auth)
+* [External Auth with OAuth2](https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/auth/oauth-external-auth)
 
-External Auth: https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/auth/external-auth
-
-External Auth via OAuth2: https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/auth/oauth-external-auth
 
 ## TLS is Required!
 It is important to note that not a single one of these methods is secure without also securing TLS for your application.
@@ -118,9 +118,9 @@ You can edit the ConfigMap to specify which HTTP error messages (e.g. 404, 501, 
 
 You can also adjust which headers are passed to your upstream servers by adjusting the ConfigMap, along with many other configuration options.
 
-Custom Errors Example: https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/customization/custom-errors
-
-Custom Headers Example: https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/customization/custom-headers
+Full Examples:
+* [Custom Errors](https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/customization/custom-errors) 
+* [Custom Headers](https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/customization/custom-headers)
 
 # More Examples
-A list of many more examples can be found here: https://github.com/kubernetes/ingress-nginx/blob/master/docs/examples/index.md
+A list of many more examples can be found here: [https://github.com/kubernetes/ingress-nginx/blob/master/docs/examples/index.md](https://github.com/kubernetes/ingress-nginx/blob/master/docs/examples/index.md)
