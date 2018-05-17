@@ -2,7 +2,7 @@
 layout: single
 title: Kubernetes Ingress TLS + External Auth
 ---
-## Kubernetes Ingress TLS + External Auth
+## Kubernetes NGINX Ingress
 I should note that the [official documentation](https://github.com/kubernetes/ingress-nginx) explains things much better than I could.
 
 The NGINX Ingress Controller functions as a Kubernetes-aware reverse-proxy.
