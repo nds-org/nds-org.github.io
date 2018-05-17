@@ -43,7 +43,7 @@ First and foremost, applying TLS termination to all of your services is usually 
 
 With the Ingress Controller, we simply import a single set of certs into a Kubernetes Secret, and point our ingress annotations at that secret to enable TLS! 
 
-No more needing to worry about having a separate, special TLS cert for each of your services - just apply a single TLS certs to your rules and let the Ingress Controller do the rest!
+No more needing to worry about having a separate, special TLS cert for each of your services - just apply a single TLS cert to your rules and let the Ingress Controller do the rest!
 
 If you have real certs, you can use those instead. If not, you can generate a self-signed cert to encrypt your traffic, but this does nothing to prove your authority to manage the domain:
 
