@@ -8,9 +8,9 @@ Rook is an open-source distributed filesystem designed for use under Kubernetes,
 
 This document serves as a high-level overview or introduction to some basic concepts and patterns surrounding Rook.
 
-All of this is explained in much better detail by their official documentation: https://rook.github.io/docs/rook/master/
+All of this is explained in much better detail by [their official documentation](https://rook.github.io/docs/rook/master/)
 
-Source code is also available here: https://github.com/rook/rook
+Source code is also available [here](https://github.com/rook/rook)
 
 ## Prerequisites
 Minimum Version: Kubernetes v1.7 or higher is supported by Rook.
@@ -25,7 +25,7 @@ If you are using `dataDirHostPath` to persist Rook data on Kubernetes hosts, mak
 ### Setting up RBAC
 On Kubernetes 1.7+, you will need to configure Rook to use RBAC appropriately.
 
-See https://rook.github.io/docs/rook/master/rbac.html
+See [Rook RBAC](https://rook.github.io/docs/rook/master/rbac.html)
 
 ### Flex Volume Configuration
 The Rook agent requires setup as a Flex volume plugin to manage the storage attachments in your cluster. See the [Flex Volume Configuration](https://rook.github.io/docs/rook/master/flexvolume.html) topic to configure your Kubernetes deployment to load the Rook volume plugin.
@@ -33,10 +33,10 @@ The Rook agent requires setup as a Flex volume plugin to manage the storage atta
 ## Getting Started
 Now that we've examined each of the pieces, let's zoom out and see what we can do with the whole cluster.
 
-For the quickest quick start, check out the Rook QuickStart guide: https://rook.github.io/docs/rook/master/quickstart.html
+For the quickest quick start, check out the [Rook QuickStart guide](https://rook.github.io/docs/rook/master/quickstart.html)
 
 ### Getting Started without an Existing Kubernetes cluster
-The easiest way to deploy a new Kubernetes cluster with Rook support on OpenStack (Nebula / SDSC) is to use the https://github.com/nds-org/kubeadm-terraform repository.
+The easiest way to deploy a new Kubernetes cluster with Rook support on OpenStack (Nebula / SDSC) is to use the [kubeadm-terraform](https://github.com/nds-org/kubeadm-terraform) repository.
 
 This may work for other cloud providers as well, but has not yet been thoroughly tested.
 
@@ -103,7 +103,7 @@ rook-ceph-mon2-p31dj              1/1       Running   0          6m
 rook-ceph-osd-0h6nb               1/1       Running   0          5m
 ```
 ## Monitoring Your Rook Cluster
-A glimpse into setting up Prometheus for monitoring Rook: https://rook.github.io/docs/rook/master/monitoring.html
+A glimpse into setting up Prometheus for [monitoring Rook](https://rook.github.io/docs/rook/master/monitoring.html)
 
 ### Advanced Configuration
 Advanced Configuration options are also documented here: https://rook.github.io/docs/rook/master/advanced-configuration.html
@@ -116,12 +116,12 @@ Advanced Configuration options are also documented here: https://rook.github.io/
 * [OSD CRUSH Settings](https://rook.github.io/docs/rook/master/advanced-configuration.html#osd-crush-settings)
 * [Phantom OSD Removal](https://rook.github.io/docs/rook/master/advanced-configuration.html#phantom-osd-removal)
 ### Debugging
-For common issues, see https://github.com/rook/rook/blob/master/Documentation/common-issues.md
+For common issues, see [Common Issues](https://github.com/rook/rook/blob/master/Documentation/common-issues.md)
 
-For more help debugging, see https://github.com/rook/rook/blob/master/Documentation/toolbox.md
+For more help debugging, see the [Rook Toolbox](https://github.com/rook/rook/blob/master/Documentation/toolbox.md)
 
 ### Cluster Teardown
-See https://rook.github.io/docs/rook/master/teardown.html for thorough steps on destroying / cleaning up your Rook cluster
+See [Cluster Teardown](https://rook.github.io/docs/rook/master/teardown.html) for thorough steps on destroying / cleaning up your Rook cluster
 
 ## Components
 Rook runs a number of smaller microservices that run on different nodes in your Kubernetes cluster:
@@ -171,7 +171,7 @@ Rook also allows you to create and manage your storage cluster through custom re
 * [File System](https://rook.github.io/docs/rook/master/filesystem-crd.html): A file system provides shared storage for multiple Kubernetes pods.
 
 ## Shared Storage Example
-Shamelessly stolen from https://rook.github.io/docs/rook/master/filesystem.html
+Shamelessly stolen from [Rook Filesystem](https://rook.github.io/docs/rook/master/filesystem.html)
 
 ### Prerequisites
 This guide assumes you have created a Rook cluster as explained in the [main Kubernetes guide](https://rook.github.io/docs/rook/master/quickstart.html)
@@ -353,7 +353,7 @@ If all of the file contents match, then congratulations!
 You have just set up your first shared filesystem under Rook!
 
 ## Under the Hood
-For more information on the low-level processes involved in the above example, see https://github.com/rook/rook/blob/master/design/filesystem.md
+For more information on the low-level processes involved in the above example, see [Filesystem Design](https://github.com/rook/rook/blob/master/design/filesystem.md)
 
 After running our above example, we can SSH into the storage0 and worker0 nodes to get a better sense of where Rook stores its data.
 
@@ -529,8 +529,8 @@ ExecStart=
 ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_SYSTEM_PODS_ARGS $KUBELET_NETWORK_ARGS $KUBELET_DNS_ARGS $KUBELET_AUTHZ_ARGS $KUBELET_CADVISOR_ARGS $KUBELET_CERTIFICATE_ARGS $KUBELET_EXTRA_ARGS
 ```
 The following GitHub issues appear to confirm that the error message above seems to stem from a misconfigured --volume-plugin-dir:
-* https://github.com/kubernetes/kubernetes/issues/16585
-* https://github.com/rook/rook/issues/1162
+* [kubernetes/kubernetes#16585](https://github.com/kubernetes/kubernetes/issues/16585)
+* [rook/rook#1162](https://github.com/rook/rook/issues/1162)
 
 Sadly, even setting this value explicitly did not fix my immediate issue.
 
@@ -908,7 +908,7 @@ But it did actively prevent me from using a shared filesystem:
 2018-05-24 16:08:45.443925 I | exec: Error EINVAL: pool 'myfs-data0' (id '3') is an erasure-coded pool, with no overwrite support
 2018-05-24 16:08:45.444031 E | op-mds: failed to create file system myfs. failed to create file system myfs: failed enabling ceph fs myfs. exit status 22
 ```
-Confirmed by this GitHub issue: https://github.com/rook/rook/issues/1604
+Confirmed by this GitHub issue: [rook/rook#1604](https://github.com/rook/rook/issues/1604)
 
 ### Back to bluestore...
 Switching back to storeType: bluestore on Rook v0.6.2 with the correct nodes/directories configuration:
@@ -970,7 +970,7 @@ The only way to recover in this case is to Ctrl+P, Ctrl+Q to abandon the kubectl
 I have noticed that cluster with pods in an error state such as this one will fail to terraform destroy (the operation never completes even after waiting 15+ minutes)
 
 ## Resolution
-After pouring through the docs and GitHub issues and tediously reading the source code, we found a concerning comment in a GitHub issue: https://github.com/rook/rook/issues/1220#issuecomment-343342515
+After pouring through the docs and GitHub issues and tediously reading the source code, we found a concerning comment in a GitHub issue: [rook/rook#1220](https://github.com/rook/rook/issues/1220#issuecomment-343342515)
 
 It turns out that this example shared filesystem **requires 3 actual nodes** to function - this is why it was mysteriously failing when only 2 OSDs were present.
 
@@ -1037,9 +1037,9 @@ spec:
 ```
 
 ## Recovering from backup
-This feature is currently in the planning stages: https://github.com/rook/rook/issues/1552
+This feature is currently in the planning stages: [rook/rook#1552](https://github.com/rook/rook/issues/1552)
 
-Unofficial Python script for creating / restoring backups from Rook: https://gitlab.com/costrouc/kubernetes-rook-backup
+Unofficial Python script for creating / restoring backups from Rook: [costrouc/kubernetes-rook-backup](https://gitlab.com/costrouc/kubernetes-rook-backup)
 
 ## Edge Cases and Quirks
 There are many pitfalls here, particularly surrounding my perceived fragility of the shared filesystem

@@ -43,7 +43,7 @@ The basic workflow is as follows:
 2. Kubernetes uses the StorageClass to determine how/whether a PV (PersistentVolume) should be created based on the claim parameters (e.g. for NFS, this effectively does a mkdir)
 3. If no existing static PV matches the parameters in the PVC, a new one should be dynamically created
 4. The PV can then be mounted into client pods by specifying the PVC name as a volume
-For more details, see https://kubernetes.io/docs/concepts/storage/persistent-volumes/#dynamic
+For more details, see [Dynamic Volume Provisioning](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#dynamic)
 
 ## In-Cluster Server Example
 Following this [example](https://github.com/erik777/kubernetes-nfs-server), I was able to easily get an NFS server pod running within a Kubernetes 1.9 cluster.
@@ -230,7 +230,7 @@ asdf 1234 Hello, World!
 ```
 
 ### Dynamic Volumes using the NFS Provisioner
-See https://github.com/kubernetes-incubator/external-storage/tree/master/nfs
+See [NFS Provisioner](https://github.com/kubernetes-incubator/external-storage/tree/master/nfs)
 
 In a slightly more complex example, we can actually have Kubernetes provision volumes dynamically for us from an NFS export.
 
