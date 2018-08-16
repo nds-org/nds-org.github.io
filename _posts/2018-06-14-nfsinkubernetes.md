@@ -1,3 +1,7 @@
+---
+layout: single
+title: NFS in Kubernetes
+---
 # NFS in Kubernetes
 Network File System is a ubiquitous technology that has applications even in today's modern world of container clusters.
 

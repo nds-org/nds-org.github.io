@@ -1,3 +1,7 @@
+---
+layout: single
+title: Rook in Kubernetes
+---
 # Rook in Kubernetes
 
 Rook is an open-source distributed filesystem designed for use under Kubernetes, and is only supported on Kubernetes 1.7 or higher.
