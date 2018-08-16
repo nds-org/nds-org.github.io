@@ -113,6 +113,7 @@ Advanced Configuration options are also documented here: https://rook.github.io/
 * [Custom ceph.conf Settings](https://rook.github.io/docs/rook/master/advanced-configuration.html#custom-cephconf-settings)
 * [OSD CRUSH Settings](https://rook.github.io/docs/rook/master/advanced-configuration.html#osd-crush-settings)
 * [Phantom OSD Removal](https://rook.github.io/docs/rook/master/advanced-configuration.html#phantom-osd-removal)
+
 ### Debugging
 For common issues, see [Common Issues](https://github.com/rook/rook/blob/master/Documentation/common-issues.md)
 
@@ -298,9 +299,9 @@ rook-agent-clxfl                  1/1       Running   0          4h        192.1
 rook-agent-gll69                  1/1       Running   0          4h        192.168.0.6   mldev-master
 rook-operator-7db5d7b9b8-svmfk    1/1       Running   0          4h        10.244.0.5    mldev-master
 ```
-The nginx containers mount the shared filesystem read-only into /usr/share/nginx/html/
+The nginx containers mount the shared filesystem read-only into `/usr/share/nginx/html/`
 
-The busybox containers mount the shared filesystem read-write into /data/
+The busybox containers mount the shared filesystem read-write into `/data/`
 
 To test that everything is working, we can exec into one busybox container and modify a file:
 ```bash
@@ -353,7 +354,7 @@ You have just set up your first shared filesystem under Rook!
 ## Under the Hood
 For more information on the low-level processes involved in the above example, see [Filesystem Design](https://github.com/rook/rook/blob/master/design/filesystem.md)
 
-After running our above example, we can SSH into the storage0 and worker0 nodes to get a better sense of where Rook stores its data.
+After running our above example, we can SSH into the `storage0` and `worker0` nodes to get a better sense of where Rook stores its data.
 
 Our current confusion seems to come from some hard-coded values in Zonca's deployment of [rook-cluster.yaml](https://raw.githubusercontent.com/zonca/jupyterhub-deploy-kubernetes-jetstream/master/storage_rook/rook-cluster.yaml):
 ```yaml

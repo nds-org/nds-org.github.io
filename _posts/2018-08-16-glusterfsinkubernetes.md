@@ -9,6 +9,7 @@ Running GlusterFS in Kubernetes with PVC support is easier than ever with the Gl
 ## Prerequisites
 * A running Kubernetes cluster with 2 or more nodes
 * No PVC support currently installed (e.g. no default StorageClass)
+
 ## The Long Way
 The [external-storage repo](https://github.com/kubernetes-incubator/external-storage/tree/master/gluster/glusterfs) from kubernetes-incubator gives the instructions for bringing this all up by hand.
 
