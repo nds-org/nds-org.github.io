@@ -2,7 +2,6 @@
 layout: single
 title: NFS in Kubernetes
 ---
-# NFS in Kubernetes
 Network File System is a ubiquitous technology that has applications even in today's modern world of container clusters.
 
 Using NFS is one of the easiest ways to get support for PVCs in Kubernetes that can dynamically provision their own PersistentVolumes.
