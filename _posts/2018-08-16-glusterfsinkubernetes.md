@@ -4,7 +4,6 @@ title: GlusterFS in Kubernetes
 ---
 GlusterFS is an open-source distributed filesystem that can run on top of Kuberenetes, allowing for PersistentVolumeClaims to dynamically provision PersistentVolumes that support ReadWriteMany.
 
-## Overview
 Running GlusterFS in Kubernetes with PVC support is easier than ever with the GlusterFS Simple Provisioner!
 
 ## Prerequisites
